@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Relative Layout Inside Linear Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registration Form"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Name"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email"
+            android:layout_below="@id/etName"
+            android:layout_marginTop="8dp" />
+    </RelativeLayout>
+
+    <!-- Constraint Layout Inside Linear Layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        android:padding="16dp"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Phone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Address"
+            app:layout_constraintTop_toBottomOf="@id/etPhone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            app:layout_constraintTop_toBottomOf="@id/etAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Table Layout Inside Linear Layout -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:background="#E0E0E0"
+        android:padding="16dp"
+        android:layout_marginTop="16dp">
+
+        <TableRow>
+            <TextView
+                android:text="Username"
+                android:padding="8dp" />
+            <EditText
+                android:hint="Enter Username"
+                android:padding="8dp" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Password"
+                android:padding="8dp" />
+            <EditText
+                android:hint="Enter Password"
+                android:padding="8dp"
+                android:inputType="textPassword" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:text="Login"
+                android:layout_span="2"
+                android:gravity="center" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- Absolute Layout Inside Linear Layout -->
+    <AbsoluteLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#F5F5F5"
+        android:padding="16dp"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_x="8dp"
+            android:layout_y="12dp"
+            android:hint="Enter Age"
+            android:x="20dp"
+            android:y="30dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_x="30dp"
+            android:layout_y="91dp"
+            android:text="Save"
+            android:x="80dp"
+            android:y="80dp" />
+    </AbsoluteLayout>
+
+</LinearLayout>
