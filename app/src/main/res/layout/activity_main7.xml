@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/subject1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter marks for Subject 1"
+        android:inputType="number"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/subject2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter marks for Subject 2"
+        android:inputType="number"
+        android:layout_below="@id/subject1"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/subject3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter marks for Subject 3"
+        android:inputType="number"
+        android:layout_below="@id/subject2"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/subject4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter marks for Subject 4"
+        android:inputType="number"
+        android:layout_below="@id/subject3"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/subject5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter marks for Subject 5"
+        android:inputType="number"
+        android:layout_below="@id/subject4"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Result"
+        android:layout_below="@id/subject5"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
